@@ -31,7 +31,31 @@ $untappd = new Untappd();
 
 The SDK makes use of [Saloon](https://docs.saloon.dev/) by Sam Carre, after a request is sent you can interact with the response with any of the [documented](https://docs.saloon.dev/the-basics/responses) methods like `->body()` or `->json()`.
 
-... endpoints tbd...
+In the example below we're requesting a single beer and formatting the response as json.
+
+```php
+$request = new GetBeer('beer-id-goes-here');
+
+$response = $untappd->send($request);
+
+$response->json();
+```
+
+#### Get a beer
+
+```php
+$request = new GetBeer('beer-id-goes-here');
+
+$response = $untappd->send($request);
+```
+
+#### Search for beer
+
+```php
+$request = new SearchBeer('brewery name or beer name string');
+
+$response = $untappd->send($request);
+```
 
 ## Testing
 
