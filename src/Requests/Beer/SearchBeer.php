@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Untappd\Requests\Search;
+namespace Untappd\Requests\Beer;
 
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
