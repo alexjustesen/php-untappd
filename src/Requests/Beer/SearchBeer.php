@@ -7,7 +7,7 @@ namespace Untappd\Requests\Search;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
-class BeerRequest extends Request
+class SearchBeer extends Request
 {
     protected Method $method = Method::GET;
 
