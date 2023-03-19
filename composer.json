@@ -1,0 +1,55 @@
+{
+    "name": "alexjustesen/php-untappd",
+    "description": "Unofficial PHP SDK for Untappd",
+    "keywords": [
+        "alexjustesen",
+        "php",
+        "untappd",
+        "beer",
+        "sdk",
+        "api"
+    ],
+    "homepage": "https://github.com/alexjustesen/php-untappd",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Alex Justesen",
+            "email": "support@alexjustesen.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "sammyjo20/saloon": "^2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.13",
+        "pestphp/pest": "^1.22",
+        "symfony/var-dumper": "^6.2"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Untappd\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Untappd\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "fix-code": [
+            "./vendor/bin/php-cs-fixer fix --allow-risky=yes"
+        ],
+        "test": [
+            "./vendor/bin/pest"
+        ]
+    }
+}
